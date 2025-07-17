@@ -2,13 +2,12 @@ html{
     scroll-snap-type: y mandatory;
 }
 #cabbagemodel{
-    position: fixed;
-    height: 80%;
-    width: 80%;
-    pointer-events: none;
-    z-index: 100;
-    transition: transform 1s ease-out;
-    transform: translateX(45%);
+    position:absolute;
+    height: 60%;
+    width: 60%;
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);
 }
 section{
     height: 100vh;
