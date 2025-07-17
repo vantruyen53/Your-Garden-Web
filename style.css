@@ -1,0 +1,19 @@
+html{
+    scroll-snap-type: y mandatory;
+}
+#cabbagemodel{
+    position: fixed;
+    height: 80%;
+    width: 80%;
+    pointer-events: none;
+    z-index: 100;
+    transition: transform 1s ease-out;
+    transform: translateX(45%);
+}
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+body{
+    background-image: linear-gradient(to right,#4b8e4b, #023f02 );
+}
