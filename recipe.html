@@ -1,0 +1,22 @@
+ <model-viewer
+          src="./savoy_cabbage.glb"
+          id="cabbagemodel"
+          camera-orbit="0deg 60deg"
+        ></model-viewer>
+<!-- link 3d -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+    
+//  3d 
+ const cabbageModel = document.getElementById("cabbagemodel");
+  let rotationX = 0;
+
+  function animate() {
+    rotationX += 0.5;
+    cabbageModel.setAttribute("camera-orbit", `${rotationX}deg 60deg`);
+    requestAnimationFrame(animate);
+  }
+
+  animate();

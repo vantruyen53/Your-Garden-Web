@@ -1,18 +1,188 @@
-html{
-    scroll-snap-type: y mandatory;
-}
-#cabbagemodel{
-    position:absolute;
-    height: 60%;
-    width: 60%;
-    right: 0;
-    top: 50%;
-    transform: translatey(-50%);
-}
-section{
+section, nav, header{
+    position: relative;
     height: 100vh;
-    scroll-snap-align: center;
 }
-body{
-    background-image: linear-gradient(to right,#4b8e4b, #023f02 );
+
+                                        /* Navbar  */
+/* ******************************************************************************************** */
+nav{
+    width: 150px;
+    gap: 30px;
+    box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 100;
+}
+nav a{
+    padding-bottom: 1.5rem;
+}
+.navclick{
+    color: green !important;
+}
+nav .logo img{
+    width: 100%;
+}
+nav .toggle-icon{
+    display: none;
+}
+nav .dropDownMenu{
+    position: absolute;
+    bottom: 100px;
+    left: 45px;
+    width: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    display: none;
+    background-color: #fff;
+}
+nav .dropDownMenu a{
+    padding: 1rem;
+}
+nav .dropDownMenu.open{
+    width: 105px;
+    box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+                                        /* Header  */
+/* ******************************************************************************************** */
+.home header .container-fluid{
+    padding-left: 150px;
+}
+.home header .text p{
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+.home header .text h1{
+    letter-spacing: 10px;
+    font-weight: 400;
+}
+.home header .buttons a{
+    border: 1px solid green;
+    color: green;
+    padding: 10px 40px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.home header .buttons a:hover{
+    color: white;
+    background-color: green;
+}
+.home header .content{
+    margin-top: -100px;
+}
+.home header img{
+    width: 170px;
+}
+.home header img:nth-child(3){
+    left: 250px;
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Max width  */
+@media(min-width:768px) and (max-width: 992px){
+
+}
+@media(max-width: 768px){
+
+                                        /* Navbar  */
+/* ******************************************************************************************** */
+     /* Navbar */
+    nav{
+        width: 100vw;
+        height: 80px;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    nav a{
+        padding-bottom: unset;
+    }
+    nav .list-menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav .menu{
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    nav .logo{
+        display: none;
+    }
+                                        /* Header  */
+/* ******************************************************************************************** */
+    .home header .container-fluid{
+        padding-left: unset;
+    }
+    .home header img{
+        padding-bottom: 80px;
+    }
+    .home header img:nth-child(3){
+        left: 0;
+    }
+}
+
+
+@media(max-width: 576px){
+                                        /* Navbar  */
+/* ******************************************************************************************** */
+    nav{
+        justify-content: space-around;
+    }
+    nav .toggle-icon{
+        display: block;
+        order: 1;
+    }
+    nav .profile{
+        order: 2;
+    }
+    nav .dropDownMenu{
+        display: block;
+    }
+    nav .menu{
+        display: none;
+    }
+
+
+                                        /* Header  */
+/* ******************************************************************************************** */
+    .home header .container-fluid .content{
+        padding: 16px;
+    }
+}
+
+
+@media(max-width: 380px){
+    .home header .buttons {
+        display: flex;  
+        flex-direction: column !important;
+    }
+    .home header .buttons a{
+        margin-right: 30px !important;
+        margin-bottom: 10px;
+    }
 }

@@ -1,10 +1,21 @@
- const cabbageModel = document.getElementById("cabbagemodel");
-  let rotationX = 0;
+// Navbar click
+const navLinks = document.querySelectorAll(".nav-list");
 
-  function animate() {
-    rotationX += 0.5;
-    cabbageModel.setAttribute("camera-orbit", `${rotationX}deg 80deg`);
-    requestAnimationFrame(animate);
-  }
+navLinks.forEach((navlink) => {
+  navlink.addEventListener("click", function () {
+    navLinks.forEach((link) => {
+      link.classList.remove("navclick");
+    });
 
-  animate();
+    this.classList.add("navclick");
+  });
+});
+
+// Drop down menu
+const toggleBtn = document.querySelector(".toggle-icon");
+const toggleBtnIcon = document.querySelector(".toggle-icon i");
+const dropDownMenu = document.querySelector(".dropDownMenu");
+
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle("open");
+};
