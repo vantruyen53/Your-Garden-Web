@@ -1,6 +1,14 @@
+body{
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background-repeat: repeat;
+}
 section, nav, header{
     position: relative;
     height: 100vh;
+}
+.home .container-fluid{
+    padding-left: 150px;
 }
 
                                         /* Navbar  */
@@ -14,6 +22,7 @@ nav{
     flex-direction: column;
     justify-content: space-around;
     z-index: 100;
+    background-color: #fff;
 }
 nav a{
     padding-bottom: 1.5rem;
@@ -47,11 +56,9 @@ nav .dropDownMenu.open{
 
 
 
-                                        /* Header  */
+                                        /* Header -Home page */
 /* ******************************************************************************************** */
-.home header .container-fluid{
-    padding-left: 150px;
-}
+
 .home header .text p{
     font-size: 16px;
     letter-spacing: 4px;
@@ -59,6 +66,7 @@ nav .dropDownMenu.open{
 .home header .text h1{
     letter-spacing: 10px;
     font-weight: 400;
+    color: green;
 }
 .home header .buttons a{
     border: 1px solid green;
@@ -78,29 +86,161 @@ nav .dropDownMenu.open{
     width: 170px;
 }
 .home header img:nth-child(3){
-    left: 250px;
+    left: 150px;
     width: 150px;
+}
+.home header img:nth-child(4){
+    width: 250px;
+    right: 20%;
 }
 
 
+                                       /* Section 1 - Home Page  */
+/* ******************************************************************************************** */
+.home .section-1 .container-fluid > img{
+    width: 250px;
+    right: 20%;
+}
+.home .section-1 .container-fluid .row img{
+    width: 85%;
+    margin: 0 auto;
+}
+.home .section-1 .content .detail h3{
+    font-weight: normal;
+    letter-spacing: 7px;
+}
+.home .section-1 .content .detail p{
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform:capitalize;
+}
 
 
+                                       /* Section 2 - Home Page  */
+/* ******************************************************************************************** */
+.home .section-2 .container-fluid > img{
+    width: 250px;
+}
+.home .section-2 .container-fluid img:nth-child(2){
+    width: 130px;
+}
+.home .section-2 .row .title{
+    margin-bottom: 90px;
+}
+.home .section-2 .row img{
+    width: 60%;
+}
+
+.home .section-2 .row p{
+    padding: 0 50px;
+    line-height: 30px;
+}
+
+                                       /* Section 3 - Home Page  */
+/* ******************************************************************************************** */
+.home .section-3 .container-fluid > img{
+    width: 130px;
+}
+.home .section-3 .row .img img{
+    width: 100%;
+}
+.home .section-3 .row  .content p{
+    line-height: 35px;
+}
+.home .section-3 .container-fluid img:nth-child(2){
+    width: 500px;
+}
+
+                                       /* Article - Home Page  */
+/* ******************************************************************************************** */
+
+.home article > img{
+    width: 500px;
+}
+.home article .title{
+
+    padding: 100px 0 0 150px;
+}
+.home article .masonry{
+    columns: 5;
+    column-gap: 20px;
+    padding-top: 70px;
+    padding-left: 150px;
+}
+.home article .masonry .item{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.home article .masonry .item img{
+    width: 100%;
+}
+.home article .masonry .item .overlay{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.home article .masonry .item:hover .overlay{
+    height: 70%;
+}
+.home article .masonry .item .overlay .text{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 
+                                       /* Footer - Home Page  */
+/* ******************************************************************************************** */
+footer{
+    margin-top: 100px;
+    height: 300px;
+    flex: 1;
+}
+footer .container-fluid .logo, .copyright, .social{
+    flex:1 ;
+}
+footer .logo{
+    background-color: #fff;
+}
+footer .logo img{
+    width: 300px;
+}
+footer .copyright{
+    background-color: green;
+    color:white;
+    font-size: 13px;
+}
+footer .copyright p{
+    margin-bottom: unset;
+}
+footer .social{
+    background-color: #fff;
+    color: green;
+    font-size: 35px;
+}
 
+                                            /* Max width  */
+/* ******************************************************************************************** */
 
-
-
-
-
-
-
-
-
-
-/* Max width  */
-@media(min-width:768px) and (max-width: 992px){
-
+@media(min-width:576px) and (max-width: 992px){
+    .home .section-2 .row p{
+        padding: 0;
+    }
 }
 @media(max-width: 768px){
 
@@ -133,9 +273,9 @@ nav .dropDownMenu.open{
     nav .logo{
         display: none;
     }
-                                        /* Header  */
+                                        /* Header - Home page */
 /* ******************************************************************************************** */
-    .home header .container-fluid{
+    .home .container-fluid{
         padding-left: unset;
     }
     .home header img{
@@ -143,6 +283,48 @@ nav .dropDownMenu.open{
     }
     .home header img:nth-child(3){
         left: 0;
+    }
+    .home header img:nth-child(4){
+        width: 150px;
+        padding-bottom: unset;
+    }
+
+                                        /* Section-1 -Home page */
+/* ******************************************************************************************** */
+    .home .section-1 .container-fluid > img{
+        width: 150px;
+    }
+    .home .section-1 .content .detail h3{
+        text-align: start !important;
+    }
+    .home .section-1 .container-fluid .row img{
+        margin: 0 auto;    
+        width: 70%;
+    }
+    .home .section-1 .content .detail{
+        width: 60%;
+    }
+
+                                        /* Section-2- Home page  */
+/* ******************************************************************************************** */
+    .home .section-2 .container-fluid > img{
+        width: 150px;
+    }
+    
+                                        /* Section-3- Home page  */
+/* ******************************************************************************************** */
+
+
+
+
+                                            /* Article- Home page  */
+/* ******************************************************************************************** */
+    .home article .masonry{
+        padding-left: unset;
+        column-gap: 10px;
+    }
+    .home article .title{
+        padding:100px  0  0;
     }
 }
 
@@ -173,6 +355,59 @@ nav .dropDownMenu.open{
     .home header .container-fluid .content{
         padding: 16px;
     }
+    .home header .content p, .buttons a{
+        font-size: .7rem;
+    }
+    .home header .content h1{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+                                            /* Section-1  */
+/* ******************************************************************************************** */
+    .home .section-1 .content .detail{
+        width: 100%;
+    }
+
+                                            /* Section-2 - Home page  */
+/* ******************************************************************************************** */
+    .home .section-2 .row{
+        margin: 0 ;
+    }
+    .home .section-2{
+        height: auto;
+    }
+    .home .section-2 .row img{
+        width: 40%;
+    }
+    .home .section-2 .row .title{
+        margin-bottom: 50px;
+    }
+
+                                       /* Section 3 - Home Page  */
+/* ******************************************************************************************** */
+    .home .section-3 .row .img img{
+        width: 50%;
+    }
+    .home .section-3 .container-fluid img:nth-child(2){
+        width: 250px;
+    }
+    .home .section-3 .container-fluid .content{
+        width: 100% !important;
+    }
+                                       /* Article - Home Page  */
+/* ******************************************************************************************** */
+
+    .home article > img{
+        width: 250px;
+    }
+
+
+                                       /* Footer - Home Page  */
+/* ******************************************************************************************** */
+    footer .container-fluid .logo img{
+        width: 10rem;
+    }
 }
 
 
@@ -184,5 +419,14 @@ nav .dropDownMenu.open{
     .home header .buttons a{
         margin-right: 30px !important;
         margin-bottom: 10px;
+    }
+    .home header img:nth-child(4){
+        right: 0;
+    }
+    .home .section-1 .container-fluid > img{
+        right: 0;
+    }
+    .home .section-1 .container-fluid .row img{ 
+        width: 90%;
     }
 }
